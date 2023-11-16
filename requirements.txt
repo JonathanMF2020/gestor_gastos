@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+pydantic
+mysqlclient
+python-dotenv
+python-multipart
+python-jose[cryptography]
