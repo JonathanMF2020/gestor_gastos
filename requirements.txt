@@ -5,3 +5,4 @@ mysqlclient
 python-dotenv
 python-multipart
 python-jose[cryptography]
+python-dateutil

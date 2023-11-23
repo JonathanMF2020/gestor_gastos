@@ -28,7 +28,9 @@ async def login(input: Credenciales):
     hashed = encrypt(input.password)
     access = create_access_token(user)
     if hashed == userObject.password:
-        return {"user": userObject,"access_token": access}
+        userObject.access_token = access
+        userObject.status_code = 200
+        return userObject
     else:
         return HTTPException(status_code=500,detail="La contraseña no coincide")
     #return {"access_token": user.nombre, "token_type": "bearer","hashed": hashed_password}
