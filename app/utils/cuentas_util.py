@@ -34,7 +34,7 @@ def ObtenerUsuarioSoloEmailDict(email:str):
     query = "SELECT * FROM cuentas WHERE email = %s"
     cursor.execute(query, [email])
     diccionario: dict = cursor.fetchone()
-    if diccionario is not None or diccionario[0] is not None:
+    if diccionario is not None:
         return diccionario
     else: 
         return None
